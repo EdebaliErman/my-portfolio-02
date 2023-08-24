@@ -4,7 +4,7 @@ import ProfileHeadText from '../ProfileHeadText/ProfileHeadText'
 
 function ProfileCard() {
     return (
-        <div className='flex gap-10 items-center justify-center'>
+        <div className='flex gap-10 items-center justify-center flex-wrap-reverse '>
             <ProfileHeadText />
             <img src={process.env.PUBLIC_URL + "/assets/EdebaliErman2.png"} alt='avatar' />
         </div>

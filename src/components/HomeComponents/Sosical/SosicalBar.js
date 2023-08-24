@@ -6,13 +6,13 @@ function SosicalBar() {
     return (
         <div>
             <ul className='sosial-buttons'>
-                <Link to={""}>
+                <Link to={"https://github.com/EdebaliErman"}>
                     <BsGithub size={32} />
                 </Link>
-                <Link to={""}>
+                <Link to={"https://www.linkedin.com/in/edebali-erman-a38821239/"}>
                     <AiFillLinkedin size={32} />
                 </Link>
-                <Link to={""}>
+                <Link to={"/contact"}>
                     <BsMailbox size={32} />
                 </Link>
             </ul>

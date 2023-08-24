@@ -3,10 +3,16 @@ import ProjectCard from '../../components/ProjectComponents/ProjectCard/ProjectC
 
 function Project() {
   return (
-    <div className='m-12'>
+    <div className='flex flex-1 flex-wrap justify-center absolute left-0  
+    mt-36 overflow-auto w-[96rem] h-[50rem] snap-x
+    2xl:w-[74rem] 
+    xl:w-[78rem] 
+    lg:w-[40rem]  lg:mt-64 
+    md:w-96 md:m-36 md:mt-64 sm:mt-64 sm:w-[30rem]
+    '>
 
-     <div className='flex  flex-wrap  '>
-     <ProjectCard
+
+      <ProjectCard
         title={`Pokemon`}
         url={process.env.PUBLIC_URL + "/assets/Pokemon.png"}
         link={`https://edebalierman.github.io/`} />
@@ -67,8 +73,7 @@ function Project() {
         title={`Money App`}
         url={"https://media.licdn.com/dms/image/D4D22AQEREpXAIlbTPw/feedshare-shrink_2048_1536/0/1682849944595?e=1695859200&v=beta&t=UCwQAntTknMgpFG_FpluOd_Kbf3_xbQzk0FS3uFWJjI"}
         link={`https://github.com/EdebaliErman/kodluyoruz-redux-05`} />
-     
-     </div>
+
 
     </div>
   )
