@@ -1,0 +1,57 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+
+  html,
+  body {
+    @apply w-full h-full flex items-center justify-center backdrop-blur relative  bg-gradient-to-tl from-cyan-950 to-cyan-100
+  }
+ 
+  svg {
+    @apply fill-black hover:fill-cyan-400 
+  }
+  img{
+    @apply z-10 w-96 rounded-s-full w-[24.25rem] h-[26.375rem] rounded-r-full
+    backdrop-blur bg-gradient-to-r from-cyan-900 via-cyan-500 to-transparent ring-offset-transparent 
+  }
+  h1{
+    @apply text-8xl 
+  }
+  h2{
+    @apply text-7xl 
+  }
+  h3{@apply text-4xl text-cyan-100 mt-5 mb-5}
+  h4{@apply text-2xl text-white}
+  p{
+    @apply text-lg font-bold w-[45rem] text-cyan-100
+  }
+  h1,h2{
+     @apply font-mono  font-bold  drop-shadow-2xl bg-gradient-to-r from-blue-50 to-cyan-300 text-transparent bg-clip-text 
+  }
+}
+
+@layer components {
+  .navbar {
+    @apply gap-8  fixed right-32 top-56 absolute  shadow-2xl  w-max h-auto justify-around items-center flex flex-col pt-12 pb-12 p-3 rounded-3xl bg-cyan-600
+  }
+  .imgBox{
+    @apply rounded-t-xl rounded-br-full rounded-tr-full rounded-l-full
+  }
+  .contact-button{
+    @apply w-auto bg-cyan-950 text-cyan-50 p-2 rounded-full m-5 bg-gradient-to-r from-blue-500 to-blue-950 font-mono font-bold
+  }
+  .portfolio-button{
+    @apply w-auto text-2xl bg-gradient-to-r from-blue-500 to-blue-950 text-transparent bg-clip-text
+  }
+  .sosial-buttons{
+    @apply flex justify-start items-start gap-5 m-2
+  }
+  .sosial-buttons svg {
+    @apply fill-slate-200
+  }
+  .App{
+    @apply h-full w-full flex justify-center items-center
+  }
+}
