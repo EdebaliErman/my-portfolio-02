@@ -1,21 +1,19 @@
 import React from 'react'
 
-function AboutTotalCard() {
+function AboutTotalCard({total}) {
     return (
-        <div className='flex gap-12'>
+        <div className='about-total-card'>
             <div>
-                <h2>+01</h2>
-                <h4>YEARS
-                    EXPERIENCE</h4>
+                <h2>{total.totalPulus.year}</h2>
+                <h4>{total.totalText.yearText}</h4>
             </div>
             <div>
-                <h2>+207</h2>
-                <h4>TOTAL COMMİTS</h4>
+                <h2>{total.totalPulus.commit}</h2>
+                <h4>{total.totalText.commitText}</h4>
             </div>
             <div>
-                <h2>+71</h2>
-                <h4>TOTAL
-                    PROJECTS</h4>
+                <h2>{total.totalPulus.project}</h2>
+                <h4>{total.totalText.projectText}</h4>
             </div>
         </div>
     )

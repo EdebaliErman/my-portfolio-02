@@ -2,11 +2,14 @@ import React from 'react'
 import ProfileHeadText from '../ProfileHeadText/ProfileHeadText'
 
 
-function ProfileCard() {
+function ProfileCard({img,text,social}) {
     return (
-        <div className='flex gap-10 items-center justify-center flex-wrap-reverse '>
-            <ProfileHeadText />
-            <img src={process.env.PUBLIC_URL + "/assets/EdebaliErman2.png"} alt='avatar' />
+        <div className='profile-card '>
+            <ProfileHeadText 
+            text={text}
+            social={social}
+            />
+            <img src={img} alt='avatar' />
         </div>
     )
 }

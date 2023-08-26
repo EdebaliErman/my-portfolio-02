@@ -6,54 +6,189 @@
 
   html,
   body {
-    @apply w-full h-full flex flex-1 flex-wrap items-center justify-center backdrop-blur relative  bg-gradient-to-tl from-cyan-950 to-cyan-100
+    @apply w-full   h-full
+  }
+  html::-webkit-scrollbar{
+    display: none;
   }
  
+
   svg {
-    @apply fill-black hover:fill-cyan-400 
+    @apply hover:fill-textTo
   }
-  img{
-    @apply z-10 w-96 rounded-s-full w-[24.25rem] h-[26.375rem] rounded-r-full
-    backdrop-blur bg-gradient-to-r from-cyan-900 via-cyan-500 to-transparent ring-offset-transparent 
-  }
-  h1{
-    @apply text-8xl 
-  }
-  h2{
-    @apply text-7xl 
-  }
-  h3{@apply text-4xl text-cyan-100 mt-5 mb-5}
-  h4{@apply text-2xl text-white}
-  p{
-    @apply text-lg font-bold w-[45rem] text-cyan-100
-  }
-  h1,h2{
-     @apply font-mono  font-bold  drop-shadow-2xl bg-gradient-to-r from-blue-50 to-cyan-300 text-transparent bg-clip-text 
-  }
-  
 }
 
 @layer components {
-  .navbar {
-    @apply gap-8  fixed right-32 top-56 absolute  shadow-2xl  w-max h-auto justify-around items-center flex flex-col pt-12 pb-12 p-3 rounded-3xl bg-cyan-600
-    
+ #root{
+  @apply  w-full h-full flex flex-1 flex-wrap items-center justify-center backdrop-blur relative bg-gradient-to-t from-bgFrom to-bgTo bg-cover
+  
+}
+  .App {
+    @apply flex justify-center items-center w-full h-full  
   }
-  .imgBox{
-    @apply rounded-t-xl rounded-br-full rounded-tr-full rounded-l-full
+  .banner{
+    @apply flex justify-around items-center absolute top-0  w-full 
+    sm:start-1
+  }
+  @media (max-width:900px) {
+      .banner{display: none;}
+      
+  }
+  .banner .left-banner{
+    @apply flex justify-center items-center
+  }
+  .banner .left-banner .left-banner-img{
+    @apply bg-none w-24 h-24 drop-shadow-sm  shadow-bgTo 
+  }
+  .banner .left-banner .left-banner-span{
+    @apply drop-shadow-sm m-3
+  }
+  .left-banner .left-banner-span .left-banner-span-h1 {
+    @apply text-5xl bg-gradient-to-br from-black to-buttonTo via-bgNavbar  bg-clip-text  text-transparent font-bold font-mono drop-shadow
+  }
+  .left-banner .left-banner-span .left-banner-span-h1-span{
+    @apply text-buttonText drop-shadow
   }
   .contact-button{
-    @apply w-auto bg-cyan-950 text-cyan-50 p-2 rounded-full m-5 bg-gradient-to-r from-blue-500 to-blue-950 font-mono font-bold
+    @apply bg-gradient-to-l from-buttonFrom to-buttonTo text-buttonText p-3 pl-5 pr-5 rounded-full m-3 font-bold
+   
   }
-  .portfolio-button{
-    @apply w-auto text-2xl bg-gradient-to-r from-blue-500 to-blue-950 text-transparent bg-clip-text
+  .navbar {
+    @apply flex justify-between items-center gap-3 fixed bottom-0 m-12 bg-bgNavbar p-2 rounded-3xl pl-12 pr-12
+      sm:bg-transparent sm:bottom-[-3rem] md:bg-bgNavbar md:bottom-0
   }
-  .sosial-buttons{
-    @apply flex justify-start items-start gap-5 m-2
+  .svg-background,.sosial-buttons svg, button{
+    @apply hover:animate-pulse
   }
-  .sosial-buttons svg {
-    @apply fill-slate-200
+  .profile-card{
+    @apply flex gap-10 items-center justify-between flex-wrap-reverse 
+    lg:justify-center lg:text-center
+    md:justify-center md:text-center
+    sm:justify-center sm:text-center
+  
   }
-  .App{
-    @apply h-full w-full flex justify-center items-center
+  .profile-card img{
+    @apply w-96 h-96 
+    rounded-r-full rounded-t-full rounded-bl-3xl
+    ml-32
+    lg:w-80 lg:h-80 lg:rounded-full lg:ml-0
+    md:w-52 md:h-52 md:rounded-full md:ml-0
+    sm:w-40 sm:h-40 sm:rounded-full sm:ml-0
   }
+  
+  .profile-head-text h1{
+    @apply text-6xl bg-gradient-to-r from-textFrom to-textTo   bg-clip-text  text-transparent font-bold font-mono drop-shadow
+    lg:text-5xl
+    md:text-4xl
+    sm:text-3xl
+  }
+  .profile-head-text h2{
+    @apply text-4xl bg-gradient-to-r from-textFrom to-textTo   bg-clip-text  text-transparent font-bold font-mono drop-shadow
+    lg:text-3xl
+    md:text-2xl
+    sm:text-xl
+  }
+  .profile-head-text .text-job{
+    @apply text-bgFrom
+  }
+  .profile-head-text p {
+    @apply text-bgTo m-4 ml-0 mr-0 text-xl font-bold font-mono
+    lg:text-xl
+    md:text-lg
+    sm:text-lg
+  }
+  .sosial-buttons {
+    @apply flex justify-start items-start gap-3 mt-5 mb-5 
+    sm:justify-center
+    md:justify-center
+    lg:justify-center
+  }
+  .sosial-buttons svg{
+    @apply fill-bgTo hover:fill-textTo 
+  }
+  .portfolio-button {
+    @apply text-3xl bg-gradient-to-br from-buttonTo to-textColorJob   bg-clip-text  text-transparent font-bold font-mono drop-shadow ml-10
+    sm:text-xl
+  }
+  .about{
+    @apply flex gap-12 justify-center items-center flex-wrap 
+    
+  }
+  .about img{
+    @apply w-96 h-96 rounded-r-full 
+    md:w-52 md:h-52 sm:w-52 sm:h-52
+  }
+  .about-text-card,.about-total-card,.about .home-buttons{@apply md:ml-12 sm:ml-12  }
+  .about-text-card h2{
+    @apply text-5xl bg-gradient-to-br from-bgFrom to-textFrom   bg-clip-text  text-transparent font-bold font-mono drop-shadow
+    md:text-4xl 
+  }
+  .home-buttons button{
+    @apply sm:text-sm sm:p-2
+  }
+  .about-text-card h3{
+    @apply text-4xl text-bgTo
+    lg:text-3xl
+    md:text-2xl
+    sm:text-xl
+
+  }
+  .about-text-card p{
+    @apply text-xl text-bgTo
+    md:text-sm md:pr-12
+    sm:text-xs sm:pr-12
+  }
+  .about-total-card {
+    @apply flex gap-12 
+  
+  }
+  .about-total-card  h2{
+    @apply text-7xl bg-gradient-to-br from-textFrom to-bgNavbar   bg-clip-text  text-transparent font-bold font-mono drop-shadow
+    md:text-3xl md:pr-12
+    sm:text-2xl 
+  }
+  .about-total-card h4{
+    @apply text-2xl text-textFrom 
+    md:text-xl
+    sm:text-xs sm:pb-10 
+  }
+  .project{
+    @apply flex flex-wrap justify-center items-center  overflow-auto w-full h-[46rem] rounded-full p-16
+  }
+  .project-card{
+    @apply shadow-2xl shadow-bgTo p-3 m-12 rounded-b-full p-5 text-center border-4 border-x-bgNavbar
+  }
+  .project-card img{
+    @apply w-80 h-80 rounded-b-full rounded-t-2xl border-4 border-x-bgNavbar
+  }
+  .project-card h4{
+    @apply text-3xl font-bold font-mono text-bgTo
+  }
+  .contact form{
+    @apply space-y-6 shadow-2xl shadow-bgFrom border-spacing-36 bg-transparent w-96 p-12 rounded-3xl
+    sm:w-72
+  }
+  .contact label{
+    @apply block text-sm  leading-6 text-bgFrom font-bold
+  }
+  .contact input,textarea{
+    @apply block p-2 w-full rounded-md border-0 py-1.5 text-bgFrom shadow-sm ring-1 ring-inset ring-textTo placeholder:text-bgFrom focus:ring-2 focus:ring-inset focus:ring-textTo sm:text-sm sm:leading-6
+  }
+  .contact
+    button{@apply flex w-full justify-center rounded-md 
+      shadow-2xl px-3 py-1.5 text-sm font-semibold leading-6 
+      focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 
+      text-bgTo hover:text-textTo shadow-sm 
+      hover:bg-bgFrom 
+      bg-bgNavbar 
+      focus-visible:outline-bgNavbar }
+}
+.project::-webkit-scrollbar {
+  display: none;
+}
+
+
+.project {
+  -ms-overflow-style: none;  
+  scrollbar-width: none;  
 }

@@ -2,10 +2,10 @@ import React from 'react'
 import { TypeAnimation } from 'react-type-animation'
 import SosicalBar from '../Sosical/SosicalBar'
 import ProfileButtons from '../ProfileButtons/ProfileButtons'
-function ProfileHeadText() {
+function ProfileHeadText({text,social}) {
     return (
-        <div>
-            <h1>EDEBALİ ERMAN</h1>
+        <div className='profile-head-text'>
+            <h1>{text.name}</h1>
             <h2>I AM   <TypeAnimation
                 sequence={[
                     'FRONT-END',
@@ -13,15 +13,15 @@ function ProfileHeadText() {
                     'FRONT-END DEVELOPER',
                     1000
                 ]}
-                className='text-cyan-900'
+                className='text-job'
                 wrapper="span"
                 speed={50}
                 repeat={Infinity}
             /> </h2>
-            <p>Hi guys, I'm 23 years old and graduated from Computer Programmer.
-                <br /> Myself Front-End I am developing as an end developer
+            <p>{text.paragraph}
+                <br /> {text.paragraph2}
             </p>
-            <SosicalBar />
+            <SosicalBar social={social} />
             <ProfileButtons />
         </div>
     )

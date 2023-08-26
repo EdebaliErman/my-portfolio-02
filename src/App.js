@@ -6,12 +6,13 @@ import Navbar from './components/Navbar/Navbar';
 import Project from './Page/Project/Project';
 import Contact from './Page/Contact/Contact';
 import Banner from './components/Banner/Banner';
+import { data } from './data/data';
 
 function App() {
   return (
-    <div className="App h-full p-1 mr-12 w-full  ">
-      <Banner/>
-      <Navbar/>
+    <div className="App  ">
+      <Banner banner={data.banner}/>
+      <Navbar icon={data.navbar.icon}/>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />

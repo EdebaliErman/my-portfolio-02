@@ -3,7 +3,7 @@ import Form from '../../components/ContactComponents/Form/Form'
 
 function Contact() {
   return (
-    <div>
+    <div className='contact'>
       <Form/>
     </div>
   )
