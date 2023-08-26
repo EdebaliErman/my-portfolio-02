@@ -31,8 +31,10 @@
     sm:start-1
   }
   @media (max-width:900px) {
-      .banner{display: none;}
-      
+      .banner{display: none;}   
+  }
+  @media (max-width:430px) {
+    .about .home-buttons{display: none;}
   }
   .banner .left-banner{
     @apply flex justify-center items-center
